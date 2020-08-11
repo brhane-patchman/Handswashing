@@ -1,6 +1,14 @@
 <script>
 import Timer from "./Timer.svelte";
 import Howto from "./Howto.svelte";
+let audio;
+function timerStarts(e) {
+    audio.play();
+}
+function stopAudio(e) {
+    audio.pause();
+    audio.currentTime = 0;
+}
 </script>
 
 <style>
@@ -15,7 +23,7 @@ a {
 	HandWashing App
 </h1>
 
-<Timer />
+<Timer on:start={timerStarts} on:end={stopAudio}/>
 
 <Howto/>
 
@@ -23,3 +31,7 @@ a {
 <a href="https://www.who.int/gpsc/clean_hands_protection/en/">Picture source </a>
 <a href="https://freesound.org/people/metrostock99/sounds/345086/"> Sound source</a>
 </h3>
+
+<audio bind:this={audio}>
+    <source src="sound.wav">
+</audio>
