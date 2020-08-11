@@ -566,7 +566,7 @@ var app = (function () {
 
     			t7 = space();
     			audio_1 = element("audio");
-    			audio_1.innerHTML = `<source src="sound.wav"><track kind="handwashing sound">`;
+    			audio_1.innerHTML = `<source src="sound.wav"><track kind="captions" srclang="en" label="english_captions">`;
     			attr(h1, "class", "svelte-1r7wcu1");
     			attr(h3, "class", "svelte-1r7wcu1");
     		},
