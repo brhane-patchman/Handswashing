@@ -20,7 +20,7 @@ a {
 }
 </style>
 <h1>
-	HandWashing App
+	Washing Hand App
 </h1>
 
 <Timer on:start={timerStarts} on:end={stopAudio}/>
