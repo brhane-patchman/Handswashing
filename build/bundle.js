@@ -468,6 +468,8 @@ var app = (function () {
     					clearInterval(timer);
     					$$invalidate(1, isRunning = false);
     					$$invalidate(0, secondLeft = totalSeconds);
+    					let audio = new Audio("applause2.wav");
+    					audio.play();
     					dispatch("end");
     				}
     			},
