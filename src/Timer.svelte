@@ -15,6 +15,8 @@ function startTimer() {
             clearInterval(timer);
             isRunning = false;
             secondLeft = totalSeconds;
+            let audio = new Audio('applause2.wav');
+            audio.play();
             dispatch('end');
             
         }

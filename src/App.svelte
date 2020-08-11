@@ -34,4 +34,5 @@ a {
 
 <audio bind:this={audio}>
     <source src="sound.wav">
+    <track kind="captions" srclang="en" label="english_captions">
 </audio>
